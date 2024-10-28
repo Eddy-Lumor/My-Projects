@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Add Equipment</h2>
+<form method="POST" action="{{ url_for('equipment') }}">
+    <input type="text" name="name" placeholder="Equipment Name" required><br>
+    <textarea name="description" placeholder="Description"></textarea><br>
+    <button type="submit">Add Equipment</button>
+</form>
+{% endblock %}

@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>All Equipment</h2>
+<a href="{{ url_for('add_equipment') }}">Add New Equipment</a>
+<ul>
+    {% for item in equipment %}
+        <li>{{ item.name }} - Available: {{ item.available }}</li>
+    {% endfor %}
+</ul>
+{% endblock %}
